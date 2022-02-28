@@ -8,9 +8,9 @@
 
 :root {
     --width-div-narrow: 40%;
-    --width-div-wide: 85%;
+    --width-div-wide: 80%;
     --margin-div: 25px;
-    --margin-articles: 70px 0 70px 30px;
+    --margin-articles: 70px 30px 70px 30px;
 
 }
 
@@ -23,6 +23,8 @@ h1, h2, h3, h4 {
 
 p {
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 :root {
@@ -41,6 +43,7 @@ body {
 :root {
 
     --background-header-contact: linear-gradient(135deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 75%);
+    --purple-color: #5722CD;
 }
 
 .buttons {
@@ -166,10 +169,7 @@ nav a:visited {
 }
 
 .intro p {
-
     padding-top: 100px;
-    font-size: 12px;
-    font-weight: 600;
 
 }
 
@@ -186,8 +186,46 @@ nav a:visited {
     align-items: center;
     border: 3px solid black;
 }
+
 /*-----------------------------------------------------*/
 .article-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--width-div-wide);
+    margin: var(--margin-div);
+    flex-wrap: wrap;
+    border: 3px solid yellow;
+}
+
+.rolling-stone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: var(--margin-articles);
+    flex-basis: 260px;
+    max-height: 250px;
+    min-height: 250px;
+    border: 3px solid red;
+    position: relative;
+}
+
+.squiggle2 {
+    position: absolute;
+    left: 0;
+    bottom: 190px;
+
+}
+
+.rolling-stone > * {
+    /*border: 3px solid blue;*/
+}
+
+/*-----------------------------------------------------*/
+
+.article-2 {
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -197,7 +235,8 @@ nav a:visited {
     border: 3px solid yellow;
 }
 
-.rolling-stone {
+.variety {
+
     display: flex;
     flex-direction: column;
     margin: var(--margin-articles);
@@ -208,29 +247,45 @@ nav a:visited {
 
 /*-----------------------------------------------------*/
 
-.article-2 {
-
-    width: var(--width-div-wide);
-    margin: var(--margin-div);
-    border: 3px solid yellow;
-}
-
-/*-----------------------------------------------------*/
-
 .article-3 {
 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     width: var(--width-div-wide);
     margin: var(--margin-div);
+    flex-wrap: wrap;
     border: 3px solid yellow;
+}
+
+.worth {
+
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin-articles);
+    flex-basis: 300px;
+    flex-shrink: 0;
+    border: 3px solid red;
 }
 
 /*-----------------------------------------------------*/
 
-.pictures{
 
+.pictures-frame {
+    display: flex;
+    flex-basis: 650px;
+    max-height: 350px;
     border: 3px solid purple;
 }
 
+.pictures {
+
+    width: 100%;
+    height: auto;
+    /*flex-shrink: 1;*/
+
+    border: 3px solid orange;
+}
 
 
 
