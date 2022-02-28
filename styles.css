@@ -34,6 +34,10 @@ p {
     font-weight: 600;
 }
 
+.contact h2 {
+    font-size: 35px;
+}
+
 .work a {
     font-weight: 600;
     color: #4845E4;
@@ -96,7 +100,7 @@ a:link {
     text-decoration: none;
 }
 
-nav a:visited {
+nav a:visited, nav a {
     color: white;
     text-decoration: none;
 }
@@ -360,6 +364,20 @@ nav a:visited {
 
 /*------- 4.6 Form --------------------------------------------------------------------------------------------*/
 
+.contact {
 
+    display: flex;
+    justify-content: center;
+    background: var(--background-header-contact);
+    padding: 50px 115px;
+    color: white;
+    border: 3px solid yellow;
+}
 
-
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--width-div-narrow);
+    border: 3px solid red;
+}
