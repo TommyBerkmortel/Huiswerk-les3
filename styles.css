@@ -20,6 +20,13 @@
 h1, h2, h3, h4 {
     font-family: 'Merriweather', serif;
 }
+ .services h3 {
+     color: var(--purple-color);
+ }
+
+ .services p {
+     color: var(--grey-text);
+ }
 
 p {
     font-family: 'Roboto', sans-serif;
@@ -27,9 +34,15 @@ p {
     font-weight: 600;
 }
 
+.work a {
+    font-weight: 600;
+    color: #4845E4;
+}
+
 :root {
     --black-text: #0C0C0C;
     --blue-text: #4845E4;
+    --grey-text: #7A7A7A;
 }
 
 /*----------------------------------------3. Layout ------------------------------------------------------------*/
@@ -44,19 +57,10 @@ body {
 
     --background-header-contact: linear-gradient(135deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 75%);
     --purple-color: #5722CD;
+    --background-projects: #F3F6F9;
+    --shadow: 0 15px 15px 0 rgba(0, 0, 0, .5);
 }
 
-.buttons {
-    color: white;
-    background-color: #ED4385;
-    border-radius: 25px;
-    border: none;
-    width: 200px;
-    height: 50px;
-    margin: 10px;
-    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, .5);
-
-}
 
 
 /*----------------------------------------4. Areas -------------------------------------------------------------*/
@@ -116,6 +120,17 @@ nav a:visited {
     align-self: center;
     padding: 15px;
     /*border: 3px solid yellow;*/
+}
+
+.buttons {
+    color: white;
+    background-color: #ED4385;
+    border-radius: 25px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    box-shadow: var(--shadow) ;
 }
 
 /*-----------------------------------------------------*/
@@ -184,7 +199,8 @@ nav a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid black;
+    background: var(--background-projects);
+    /*border: 3px solid black;*/
 }
 
 /*-----------------------------------------------------*/
@@ -196,7 +212,7 @@ nav a:visited {
     width: var(--width-div-wide);
     margin: var(--margin-div);
     flex-wrap: wrap;
-    border: 3px solid yellow;
+    /*border: 3px solid yellow;*/
 }
 
 .rolling-stone {
@@ -207,65 +223,79 @@ nav a:visited {
     flex-basis: 260px;
     max-height: 250px;
     min-height: 250px;
-    border: 3px solid red;
     position: relative;
+    /*border: 3px solid red;*/
 }
 
-.squiggle2 {
+.squiggle3 {
     position: absolute;
     left: 0;
     bottom: 190px;
 
 }
 
-.rolling-stone > * {
-    /*border: 3px solid blue;*/
-}
-
 /*-----------------------------------------------------*/
 
 .article-2 {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: var(--width-div-wide);
     margin: var(--margin-div);
     flex-wrap: wrap;
-    border: 3px solid yellow;
+    /*border: 3px solid yellow;*/
 }
 
 .variety {
-
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin: var(--margin-articles);
-    flex-basis: 300px;
-    flex-shrink: 0;
-    border: 3px solid red;
+    flex-basis: 260px;
+    max-height: 250px;
+    min-height: 250px;
+    position: relative;
+    /*border: 3px solid red;*/
+}
+
+.squiggle3 {
+    position: absolute;
+    left: 0;
+    bottom: 190px;
+
 }
 
 /*-----------------------------------------------------*/
 
 .article-3 {
-
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     width: var(--width-div-wide);
     margin: var(--margin-div);
     flex-wrap: wrap;
-    border: 3px solid yellow;
+    /*border: 3px solid yellow;*/
 }
 
 .worth {
-
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin: var(--margin-articles);
-    flex-basis: 300px;
-    flex-shrink: 0;
-    border: 3px solid red;
+    flex-basis: 260px;
+    max-height: 250px;
+    min-height: 250px;
+    position: relative;
+    /*border: 3px solid red;*/
+}
+
+.squiggle3 {
+    position: absolute;
+    left: 0;
+    bottom: 190px;
+
 }
 
 /*-----------------------------------------------------*/
@@ -273,24 +303,62 @@ nav a:visited {
 
 .pictures-frame {
     display: flex;
-    flex-basis: 650px;
-    max-height: 350px;
-    border: 3px solid purple;
+    flex-basis: 800px;
+    max-height: 500px;
+    /*border: 3px solid purple;*/
 }
 
 .pictures {
 
     width: 100%;
     height: auto;
-    /*flex-shrink: 1;*/
-
-    border: 3px solid orange;
+    box-shadow: var(--shadow);
+    /*border: 3px solid orange;*/
 }
 
+/*-----------------------------------------------------*/
 
+.work a::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #4845E4;
+    position: absolute;
+    bottom: 6px;
+    left: 95px;
+    transition: width .35s ease-in-out;
+}
 
+.work a:hover::after {
+    width: 50px;
+}
 
+/*------- 4.4 Services --------------------------------------------------------------------------------------------*/
 
+.services {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 250px 115px;
+    /*border: 3px solid red;*/
+}
+
+.services > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 380px;
+    min-width: 380px;
+    height: 400px;
+    padding: 55px 50px 55px 50px;
+    margin: 20px;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--purple-color);
+}
+
+/*------- 4.6 Form --------------------------------------------------------------------------------------------*/
 
 
 
