@@ -20,13 +20,14 @@
 h1, h2, h3, h4 {
     font-family: 'Merriweather', serif;
 }
- .services h3 {
-     color: var(--purple-color);
- }
 
- .services p {
-     color: var(--grey-text);
- }
+.services h3 {
+    color: var(--purple-color);
+}
+
+.services p {
+    color: var(--grey-text);
+}
 
 p {
     font-family: 'Roboto', sans-serif;
@@ -41,6 +42,10 @@ p {
 .work a {
     font-weight: 600;
     color: #4845E4;
+}
+
+.input-fields {
+    font-weight: bold;
 }
 
 :root {
@@ -58,13 +63,11 @@ body {
 }
 
 :root {
-
     --background-header-contact: linear-gradient(135deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 75%);
     --purple-color: #5722CD;
     --background-projects: #F3F6F9;
     --shadow: 0 15px 15px 0 rgba(0, 0, 0, .5);
 }
-
 
 
 /*----------------------------------------4. Areas -------------------------------------------------------------*/
@@ -96,7 +99,6 @@ header {
 }
 
 a:link {
-
     text-decoration: none;
 }
 
@@ -108,7 +110,6 @@ nav a:visited, nav a {
 /*-----------------------------------------------------*/
 
 .call2action {
-
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -134,7 +135,7 @@ nav a:visited, nav a {
     width: 200px;
     height: 50px;
     margin: 10px;
-    box-shadow: var(--shadow) ;
+    box-shadow: var(--shadow);
 }
 
 /*-----------------------------------------------------*/
@@ -313,7 +314,6 @@ nav a:visited, nav a {
 }
 
 .pictures {
-
     width: 100%;
     height: auto;
     box-shadow: var(--shadow);
@@ -341,7 +341,6 @@ nav a:visited, nav a {
 /*------- 4.4 Services --------------------------------------------------------------------------------------------*/
 
 .services {
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -365,13 +364,12 @@ nav a:visited, nav a {
 /*------- 4.6 Form --------------------------------------------------------------------------------------------*/
 
 .contact {
-
     display: flex;
     justify-content: center;
     background: var(--background-header-contact);
     padding: 50px 115px;
     color: white;
-    border: 3px solid yellow;
+    /*border: 3px solid yellow;*/
 }
 
 form {
@@ -379,5 +377,37 @@ form {
     flex-direction: column;
     align-items: center;
     width: var(--width-div-narrow);
-    border: 3px solid red;
+    /*border: 3px solid red;*/
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 360px;
+    width: 660px;
+    padding: 15px 8px 0 8px;
+    /*border: 3px solid black;*/
+}
+
+.input-fields > * {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    /*border: 3px solid yellow;*/
+}
+
+.input-fields ::placeholder {
+    padding-left: 15px;
+}
+
+#user-name-field,
+#user-email-field {
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+}
+
+#user-message-field {
+    border-radius: 6px;
+    border: none;
 }
