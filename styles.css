@@ -411,3 +411,23 @@ form {
     border-radius: 6px;
     border: none;
 }
+
+/*------- 4.7 Footer ------------------------------------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+    background: black;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: lighter;
+    color: white;
+}
+
+
+
+
+
