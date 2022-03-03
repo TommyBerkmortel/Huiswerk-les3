@@ -7,8 +7,8 @@
 }
 
 :root {
-    --width-div-narrow: 40%;
-    --width-div-wide: 80%;
+    --width-div-narrow: 37vw;
+    --width-div-wide: 75vw;
     --margin-div: 25px;
     --margin-articles: 70px 30px 70px 30px;
 
@@ -51,6 +51,7 @@ p {
 :root {
     --black-text: #0C0C0C;
     --blue-text: #4845E4;
+    --blue-background-text: rgba(72, 69, 228, 0.1);
     --grey-text: #7A7A7A;
 }
 
@@ -69,6 +70,26 @@ body {
     --shadow: 0 15px 15px 0 rgba(0, 0, 0, .5);
 }
 
+.oblique-line{
+    border-bottom: 50px solid white;
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+}
+
+.oblique-line2{
+    border-bottom: 50px solid var(--background-projects);
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+}
+
+.oblique-line3{
+    border-bottom: 50px solid red;
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+}
 
 /*----------------------------------------4. Areas -------------------------------------------------------------*/
 
@@ -152,7 +173,7 @@ nav a:visited, nav a {
 
 .squiggle2 {
     position: absolute;
-    left: calc(50% - 28px);
+    left:50%; transform: translateX(-50%);
     bottom: 70px;
 
 }
@@ -163,7 +184,10 @@ nav a:visited, nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*border: 3px solid black;*/
+    padding: 100px 0;
+    position: relative;
+    border: 3px solid black;
+
 }
 
 .intro {
@@ -172,7 +196,8 @@ nav a:visited, nav a {
     flex-basis: 350px;
     width: var(--width-div-narrow);
     margin: var(--margin-div);
-    /*border: 3px solid red*/
+    padding: 0 80px;
+    border: 3px solid red
 }
 
 .intro > * {
@@ -198,13 +223,32 @@ nav a:visited, nav a {
     color: var(--blue-text);
 }
 
+.hello::before {
+    content: "hello";
+    text-align: center;
+    font-weight: bold;
+    font-size: 360px;
+    color: var(--blue-background-text);
+    display: block;
+    position: absolute;
+    height: 400px;
+    width: 1000px;
+    top: 0;
+    left:50%; transform: translateX(-50%);
+    z-index: -1;
+    border: 3px solid red;
+
+}
+
 /*------- 4.3 work --------------------------------------------------------------------------------------------*/
 
 .work {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 200px 115px;
     background: var(--background-projects);
+    position: relative;
     /*border: 3px solid black;*/
 }
 
@@ -340,15 +384,21 @@ nav a:visited, nav a {
 
 /*------- 4.4 Services --------------------------------------------------------------------------------------------*/
 
-.services {
+.services{
+    display: flex;
+    position: relative;
+}
+
+.container-services {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 250px 115px;
+    /*position: relative;*/
+    padding: 200px 115px;
     /*border: 3px solid red;*/
 }
 
-.services > * {
+.container-services > * {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
