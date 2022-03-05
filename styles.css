@@ -7,7 +7,7 @@
 }
 
 :root {
-    --width-div-narrow: 37vw;
+    --width-div-narrow: 52vw;
     --min-width-narrow: 400px;
     --width-div-wide: 75vw;
     --margin-div: 25px;
@@ -141,13 +141,13 @@ nav a:visited, nav a {
     min-width: var(--min-width-narrow);
     margin: var(--margin-div);
     text-align: center;
-    /*border: 3px solid red;*/
+    border: 3px solid red;
 }
 
 .call2action > * {
     align-self: center;
     padding: 15px;
-    /*border: 3px solid yellow;*/
+    border: 3px solid yellow;
 }
 
 .buttons {
@@ -200,7 +200,7 @@ nav a:visited, nav a {
     min-width: var(--min-width-narrow);
     margin: var(--margin-div);
     padding: 0 80px;
-    /*border: 3px solid red*/
+    border: 3px solid red
 }
 
 .intro > * {
