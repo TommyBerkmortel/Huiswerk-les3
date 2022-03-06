@@ -7,11 +7,12 @@
 }
 
 :root {
-    --width-div-narrow: 52vw;
-    --min-width-narrow: 400px;
-    --width-div-wide: 75vw;
+    --width-div-narrow: 53vw;
+    --max-width-div-narrow: 636px;
+    --min-width-narrow: 320px;
+    --width-div-wide: 85vw;
     --margin-div: 25px;
-    --margin-articles: 70px 30px 70px 30px;
+    --margin-articles: 70px 0 70px 0;
 
 }
 
@@ -110,7 +111,7 @@ header {
 
 /*-----------------------------------------------------*/
 
-.Nav-links {
+.nav-links {
     display: flex;
     flex-direction: row;
     Justify-content: flex-end;
@@ -138,16 +139,16 @@ nav a:visited, nav a {
     align-self: center;
     flex-shrink: 0;
     width: var(--width-div-narrow);
-    min-width: var(--min-width-narrow);
+    max-width: var(--max-width-div-narrow);
     margin: var(--margin-div);
     text-align: center;
-    border: 3px solid red;
+    /*border: 3px solid red;*/
 }
 
 .call2action > * {
     align-self: center;
     padding: 15px;
-    border: 3px solid yellow;
+    /*border: 3px solid yellow;*/
 }
 
 .buttons {
@@ -198,9 +199,10 @@ nav a:visited, nav a {
     flex-basis: 350px;
     width: var(--width-div-narrow);
     min-width: var(--min-width-narrow);
+    max-width: var(--max-width-div-narrow);
     margin: var(--margin-div);
-    padding: 0 80px;
-    border: 3px solid red
+    padding: 0 40px;
+    /*border: 3px solid red*/
 }
 
 .intro > * {
@@ -232,7 +234,6 @@ nav a:visited, nav a {
     display: block;
     position: absolute;
     height: 400px;
-    width: 800px;
     top: 0;
     left:50%; transform: translateX(-50%);
     z-index: -1;
@@ -245,10 +246,10 @@ nav a:visited, nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 280px 115px;
+    padding: 260px 115px 180px 115px;
     background: var(--background-projects);
     position: relative;
-    z-index: -1;
+    z-index: -2;
     /*border: 3px solid black;*/
 }
 
@@ -256,12 +257,11 @@ nav a:visited, nav a {
     content: "work";
     text-align: center;
     font-weight: bold;
-    font-size: 360px;
+    font-size: 440px;
     color: var(--white-background-text);
     display: block;
     position: absolute;
     height: 400px;
-    width: 800px;
     top: 0;
     left:50%; transform: translateX(-50%);
     z-index: -1;
@@ -272,7 +272,7 @@ nav a:visited, nav a {
 .article-1 {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: var(--width-div-wide);
     margin: var(--margin-div);
@@ -295,7 +295,7 @@ nav a:visited, nav a {
 .squiggle3 {
     position: absolute;
     left: 0;
-    bottom: 190px;
+    bottom: 180px;
 }
 
 /*-----------------------------------------------------*/
@@ -303,7 +303,7 @@ nav a:visited, nav a {
 .article-2 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: var(--width-div-wide);
     margin: var(--margin-div);
@@ -334,7 +334,7 @@ nav a:visited, nav a {
 .article-3 {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: var(--width-div-wide);
     margin: var(--margin-div);
@@ -365,7 +365,7 @@ nav a:visited, nav a {
 
 .pictures-frame {
     display: flex;
-    flex-basis: 800px;
+    flex-basis: 700px;
     max-height: 500px;
     /*border: 3px solid purple;*/
 }
@@ -397,17 +397,20 @@ nav a:visited, nav a {
 
 /*------- 4.4 Services --------------------------------------------------------------------------------------------*/
 
-.services{
+.services {
     display: flex;
+    justify-content: center;
     position: relative;
+    padding: 200px 10px 100px 10px;
     z-index: -1;
+    /*border: 3px solid orange;*/
 }
 
 .container-services {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 280px 115px 100px 115px;
+    max-width: 1200px;
     /*border: 3px solid red;*/
 }
 
@@ -415,12 +418,12 @@ nav a:visited, nav a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-basis: 380px;
+    flex-basis: 335px;
     background: white;
-    min-width: 380px;
+    min-width: 300px;
     height: 400px;
-    padding: 55px 50px 55px 50px;
-    margin: 20px;
+    padding: 55px 30px 55px 30px;
+    margin: 15px;
     box-shadow: var(--shadow);
     border: 2px solid var(--purple-color);
 }
@@ -429,12 +432,11 @@ nav a:visited, nav a {
     content: "services";
     text-align: center;
     font-weight: bold;
-    font-size: 360px;
+    font-size: 260px;
     color: var(--purple-background-text);
     display: block;
     position: absolute;
     height: 400px;
-    width: 70%;
     top: 0;
     left:50%; transform: translateX(-50%);
     z-index: -1;
@@ -459,6 +461,7 @@ form {
     align-items: center;
     width: var(--width-div-narrow);
     min-width: var(--min-width-narrow);
+    max-width: var(--max-width-div-narrow);
     /*border: 3px solid red;*/
 }
 
@@ -508,6 +511,94 @@ footer p {
     font-weight: lighter;
     color: white;
 }
+
+/*------- 4.8 Media query ------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 992px) {
+    .hello {
+        padding: 80px 0;
+    }
+    .hello::before {
+        font-size: 280px;
+    }
+    .work {
+        padding: 250px 115px 100px 115px;
+    }
+    .work::before {
+        font-size: 380px;
+    }
+    .services {
+        padding: 170px 10px 70px 10px;
+    }
+    .services::before {
+        font-size: 220px;
+    }
+    .contact h2 {
+        font-size: 30px;
+    }
+}
+
+
+/*-----------------------------------------------------*/
+
+@media screen and (max-width: 575px) {
+    .nav-links {
+        justify-content: space-between;
+        font-size: 13px;
+    }
+    .call2action {
+        width: 320px;
+        margin: 0;
+    }
+    .call2action h1 {
+        font-size: 20px;
+    }
+    .hello {
+        padding: 60px 0;
+    }
+    .hello::before {
+        font-size: 150px;
+    }
+    .intro {
+        width: 320px;
+        margin: 0;
+        padding: 0;
+    }
+    .intro h3 {
+        font-size: 14px;
+    }
+    .work {
+        padding: 90px 115px 70px 115px;
+    }
+    .work::before {
+        font-size: 140px;
+    }
+    .services {
+        padding: 55px 10px 50px 10px;
+    }
+    .services::before {
+        font-size: 80px;
+    }
+    .container-services {
+        width: 320px;
+    }
+    .container-services > * {
+        width: 3200px;
+        padding: 55px 15px;
+    }
+    .contact h2 {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
